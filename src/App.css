@@ -106,6 +106,27 @@ body {
   gap: 10px;
 }
 
+.event-badge{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.event-category{
+  margin: 0 0 8px;
+  color: #198c58;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 
 /* TAGS */
 
@@ -257,4 +278,4 @@ body {
   .events-grid {
     grid-template-columns: 1fr;
   }
-}
+} 
