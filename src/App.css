@@ -279,3 +279,165 @@ body {
     grid-template-columns: 1fr;
   }
 } 
+
+
+/*EXPLOREEVENT STYLING*/
+
+/* ===== EXPLORE EVENTS (isolated styles) ===== */
+
+.explore-events {
+  width: 100%;
+  padding: 70px 7%;
+  background: white;
+}
+
+.explore-header {
+  margin-bottom: 35px;
+}
+
+.explore-section-label {
+  margin: 0 0 12px;
+  color: #126337;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.explore-header h2 {
+  margin: 0;
+  color: #152238;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.explore-section-description {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #6d747c;
+  font-size: 16px;
+}
+
+.explore-events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.explore-event-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.explore-event-top {
+  min-height: 130px;
+  padding: 18px;
+  position: relative;
+}
+
+.explore-banner-teal { background: linear-gradient(135deg, #0e7c8a, #2196a8); }
+.explore-banner-gold { background: linear-gradient(135deg, #b8860b, #d4a017); }
+.explore-banner-purple { background: linear-gradient(135deg, #6b2d8c, #8e44ad); }
+.explore-banner-red { background: linear-gradient(135deg, #8c2d2d, #c0392b); }
+
+.explore-event-format-tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.explore-event-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.explore-event-content {
+  padding: 20px;
+}
+
+.explore-event-category {
+  margin: 0 0 6px;
+  color: #198c58;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.explore-event-content h3 {
+  margin: 0 0 10px;
+  color: #162238;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.explore-event-description {
+  margin: 0 0 16px;
+  color: #777f85;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.explore-event-datetime {
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.explore-view-event-link {
+  color: #198c58;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.explore-view-event-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .explore-events {
+    padding: 60px 5%;
+  }
+  .explore-header h2 {
+    font-size: 34px;
+  }
+  .explore-events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+} 
+
+@media (max-width: 700px) {
+  .explore-events {
+    padding: 45px 20px;
+  }
+  .explore-header h2 {
+    font-size: 30px;
+  }
+  .explore-section-description {
+    font-size: 14px;
+  }
+  .explore-events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+}

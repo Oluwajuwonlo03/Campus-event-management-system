@@ -1,76 +1,75 @@
-function ExploreEvents() {
+function ExploreEvents(){
   const events = [
     {
       type: "Webinar",
       format: "Online",
-      day: "01",
-      month: "SEP",
-      year: "2026",
-      time: "3:00 PM",
-      title: "Demo Global Webinar: Future-Ready University Learning",
-      description: "A demonstration webinar for remote and diaspora participation using secure online access and attendance evidence.",
+      bannerColor: "teal",
+      badge: "WB",
+      date: "Tue, 1 sep 2026",
+      time: "3:00pm",
+      title: "Demo Global Webinar: Future-Reday University Learning",
+      description: "A demonstration webinar for remote and dispora participationusing secure online access and attendance evidence.",
     },
     {
-      type: "Seminar",
+type: "Seminar",
       format: "Hybrid",
-      day: "07",
-      month: "SEP",
-      year: "2026",
-      time: "1:00 PM",
-      title: "Demo Distinguished Academic Seminar Series",
+      bannerColor: "gold",
+      badge: "SE",
+      date: "Mon, 7 sep 2026",
+      time: "1:00pm",
+      title: "Demo Distinguished Academic Seminar series",
       description: "A demonstration seminar featuring scholarly dialogue, guest speakers and audience engagement.",
     },
     {
-      type: "Workshop",
+       type: "Workshop",
       format: "Physical",
-      day: "13",
-      month: "SEP",
-      year: "2026",
-      time: "9:00 AM",
-      title: "Demo Digital Skills & Research Tools Workshop",
+      bannerColor: "purple",
+      badge: "WS",
+      date: "Sun, 13 sep 2026",
+      time: "9:00am",
+      title: "Demo Digital Skils And Research Tool Workshop",
       description: "A hands-on demonstration workshop with limited capacity, attendance tracking, resources and certification.",
     },
+    {
+      type: "Training/Professional Development",
+      format: "Hybrid",
+      bannerColor: "red",
+      badge: "TR",
+      date: "Sat, 19 sep 2026",
+      time: "9:30AM",
+      title: "Demo Professional Training & Development Programme",
+      description: "A sample professional-development programme demonstrating multi-session training,attendance  and credential workflows"
+    }
   ];
 
-  return (
+  return(
     <section className="explore-events">
       <div className="explore-header">
-        <p className="section-label">WHAT'S HAPPENING</p>
-        <h2>Upcoming university events</h2>
-        <p className="section-description">{events.length} events shown</p>
+      <p className="section-label">WHAT'S HAPPENING</p>
+      <h2>Upcoming university events</h2>
+      <p className="section-description">{events.length} events shown</p>
       </div>
 
-      <div className="events-grid">
-        {events.map((event, index) => (
-          <div className="event-card" key={index}>
-            <div className="event-top">
-              <div className="event-tags">
-                <span className="event-type">{event.type}</span>
-              </div>
-              <div className="event-badge">
-                {event.type.slice(0,2).toUpperCase()}
-                </div>
-                <div className="event-date">
-                    <strong>{event.day}</strong>
-                    <span>{event.month} {event.year}</span>
-              </div>
+      <div className="explore-events-grid">
+        {events.map((events, index) => (
+          <div className="explore-event-card" key ={index}>
+            <div className={`explore-event-top explore-banner-${events.bannerColor}`}>
+              <span className="explore-event-format-tag">{events.format}</span>
+              <div className="explore-event-badge">{events.badge}</div>
             </div>
 
-            <div className="event-content">
-                <p className="event-category">{event.type}</p>
-              <h3>{event.title}</h3>
-              <p className="event-description">{event.description}</p>
-              <div className="event-info">
-                <span>{event.format}</span>
-                <span>{event.time}</span>
-              </div>
-              <button className="explore-button">View Event →</button>
+            <div className="explore-event-content">
+              <p className="explore-event-category">{events.type}</p>
+              <h3>{events.title}</h3>
+              <p className="explore-event-description">{events.description}</p>
+                  <p className="explore-event-datetime">{events.date}<br />{events.time}</p>
+                  <a href="#" className="explore-view-event-link">View Event</a>
             </div>
           </div>
         ))}
       </div>
     </section>
-  );
+  )
 }
 
 export default ExploreEvents;
