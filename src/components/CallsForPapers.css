@@ -1,0 +1,183 @@
+.calls-section {
+  width: 100%;
+  padding: 70px 7%;
+  background: #f7f9f8;
+  box-sizing: border-box;
+}
+
+.calls-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 28px;
+}
+
+/* LEFT SIDE */
+
+.calls-intro {
+  background: #075d35;
+  color: white;
+  border-radius: 18px;
+  padding: 42px 34px;
+  min-height: 350px;
+  box-sizing: border-box;
+}
+
+.calls-label {
+  color: #f4c400;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 0 0 16px;
+}
+
+.calls-intro h2 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 0 0 22px;
+}
+
+.calls-description {
+  color: #e0ebe5;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 450px;
+  margin-bottom: 28px;
+}
+
+.explore-conferences {
+  background: white;
+  color: #17233b;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+
+.paper-card {
+  background: white;
+  border: 1px solid #e1e7e3;
+  border-radius: 18px;
+  padding: 28px;
+  box-sizing: border-box;
+  min-height: 350px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.paper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.paper-header span {
+  background: #e6f3eb;
+  color: #145c38;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.paper-header p {
+  color: #858585;
+  margin: 0;
+  font-size: 14px;
+}
+
+.paper-card h3 {
+  color: #17233b;
+  font-size: 24px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.paper-card h4 {
+  color: #268258;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 22px;
+  font-weight: 600;
+}
+
+.deadline {
+  background: #f0f5f2;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.deadline span {
+  color: #777;
+  font-size: 14px;
+}
+
+.deadline strong {
+  color: #17233b;
+  font-size: 14px;
+}
+
+.paper-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.paper-buttons button {
+  padding: 11px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background: #198754;
+  color: white;
+  border: 1px solid #198754;
+}
+
+.details-button {
+  background: white;
+  color: #267454;
+  border: 1px solid #8ab29f;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .calls-container {
+    grid-template-columns: 1fr;
+  }
+
+  .calls-intro h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 500px) {
+  .calls-section {
+    padding: 45px 5%;
+  }
+
+  .calls-intro,
+  .paper-card {
+    padding: 25px;
+  }
+
+  .paper-card h3 {
+    font-size: 20px;
+  }
+
+  .deadline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
