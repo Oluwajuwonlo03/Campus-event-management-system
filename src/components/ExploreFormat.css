@@ -1,0 +1,130 @@
+.explore-section {
+  padding: 70px 7%;
+  background: #f7f9f8;
+}
+
+.explore-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  color: #145c38;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.explore-header h2 {
+  color: #17233b;
+  font-size: 42px;
+  margin: 0 0 12px;
+}
+
+.section-description {
+  max-width: 850px;
+  color: #70777d;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.academic-button {
+  padding: 13px 20px;
+  border: 1px solid #7ba995;
+  background: transparent;
+  color: #317454;
+  border-radius: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.format-card {
+  min-height: 165px;
+  padding: 18px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.format-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.format-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.format-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.international {
+  background: #275bb3;
+}
+
+.conferences {
+  background: #159447;
+}
+
+.seminars {
+  background: #d38b00;
+}
+
+.workshops {
+  background: #8140a8;
+}
+
+.webinars {
+  background: #148da0;
+}
+
+.training {
+  background: #c84545;
+}
+
+@media (max-width: 1000px) {
+  .format-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .explore-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .explore-header h2 {
+    font-size: 32px;
+  }
+
+  .format-grid {
+    grid-template-columns: 1fr;
+  }
+}
