@@ -1,0 +1,122 @@
+/* NAVBAR */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  background-color: #0f3822;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+  border-radius: 25px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.home {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home:hover {
+  color: white;
+}
+
+.explore {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explore:hover {
+  color: white;
+}
+
+.academic {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.academic:hover {
+  color: white;
+}
+
+.calender {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calender:hover {
+  color: white;
+}
+
+.verify {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.verify:hover {
+  color: white;
+}
+
+.btn {
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.btn-1 {
+  padding: 10px 20px;
+  background-color: #0f3822;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.btn-1:hover {
+  background-color: green;
+  color: black;
+}
+
+.signin-btn {
+  padding: 10px 10px;
+  background-color: #0f3822;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.signin-btn:hover {
+  color: black;
+  background-color: green;
+}

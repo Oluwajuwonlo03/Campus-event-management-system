@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-
-function Signin({ onBack }) {
+function Signin({ onBack, onCreateAccount }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "" || password === "") {
@@ -13,19 +13,19 @@ function Signin({ onBack }) {
     }
     alert("Sign in successful!");
   };
+
   return (
     <div className="con">
       <div className="auth-container">
         <div className="signin-header">
-          <button className="secure-btn">
-            Secure Account Access
-          </button>
+          <button className="secure-btn">Secure Account Access</button>
           <h2 className="sign">Sign in</h2>
           <p>
             Enter your registered email address and password
             <br />
             to access your account.
           </p>
+
           <form onSubmit={handleSubmit}>
             <p className="email">Email address</p>
             <input
@@ -35,6 +35,7 @@ function Signin({ onBack }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+
             <p className="pass">Password</p>
             <input
               className="input-password"
@@ -43,6 +44,7 @@ function Signin({ onBack }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+
             <div className="show-password">
               <input
                 type="checkbox"
@@ -51,10 +53,12 @@ function Signin({ onBack }) {
               />
               <span>Show password</span>
             </div>
+
             <button type="submit" className="signin-submit">
               Sign In
             </button>
           </form>
+
           <div className="txt">
             <p>
               <strong>FUTO Student: </strong>
@@ -67,11 +71,21 @@ function Signin({ onBack }) {
               new password immediately after first login.
             </p>
           </div>
+
           <div className="links">
-            <a href="#create">Create account</a>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                onCreateAccount();
+              }}
+            >
+              Create account
+            </a>
             <a href="#forgot">Forgot password?</a>
             <a href="#resend">Resend verification</a>
           </div>
+
           <button className="back-btn" onClick={onBack}>
             ← Back to Home
           </button>
@@ -80,4 +94,5 @@ function Signin({ onBack }) {
     </div>
   );
 }
+
 export default Signin;
