@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function SearchEvent() {
+function SearchEvent({ onSearch }) {
   const [filters, setFilters] = useState({
     keyword: "",
     eventType: "All types",
@@ -10,6 +10,25 @@ function SearchEvent() {
     fromDate: "",
     toDate: "",
   });
+
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const API_URL = "https://6aa406bae7ae868cdf7b96fa.mockapi.io/events";
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,15 +40,32 @@ function SearchEvent() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    console.log("Searching with filters:", filters);
+    let results = [...events];
 
-    // Temporary feedback
-    alert(
-      `Searching events...\n\nKeyword: ${filters.keyword || "Any"}\nType: ${filters.eventType}\nDelivery: ${filters.delivery}\nWhen: ${filters.when}\nCategory: ${filters.category}`
-    );
+    if (filters.keyword.trim() !== "") {
+      results = results.filter((event) =>
+        (event.title || "").toLowerCase().includes(filters.keyword.toLowerCase())
+      );
+    }
 
-    // Later you can filter real events here
+    if (filters.eventType !== "All types") {
+      results = results.filter((event) => event.type === filters.eventType);
+    }
+
+    if (filters.delivery !== "All modes") {
+      results = results.filter((event) => event.delivery === filters.delivery);
+    }
+
+    if (filters.category !== "All categories") {
+      results = results.filter((event) => event.category === filters.category);
+    }
+
+    setLoading(false);
+
+    // Go to the new Search Results page
+    onSearch(results);
   };
 
   return (
@@ -45,7 +81,6 @@ function SearchEvent() {
 
         <form onSubmit={handleSearch}>
           <div className="search-row">
-            {/* Keyword */}
             <div className="form-group">
               <label className="key-word">Keyword</label>
               <br />
@@ -59,7 +94,6 @@ function SearchEvent() {
               />
             </div>
 
-            {/* Event type */}
             <div className="form-group">
               <label>Event type</label>
               <br />
@@ -82,7 +116,6 @@ function SearchEvent() {
               </select>
             </div>
 
-            {/* Delivery */}
             <div className="form-group">
               <label>Delivery</label>
               <br />
@@ -98,7 +131,6 @@ function SearchEvent() {
               </select>
             </div>
 
-            {/* When */}
             <div className="form-group">
               <label>When</label>
               <br />
@@ -109,7 +141,6 @@ function SearchEvent() {
               </select>
             </div>
 
-            {/* Category */}
             <div className="form-group">
               <label>Category</label>
               <br />
@@ -142,7 +173,6 @@ function SearchEvent() {
                 name="fromDate"
                 value={filters.fromDate}
                 onChange={handleChange}
-                onClick={(e) => e.target.showPicker && e.target.showPicker()}
               />
             </div>
 
@@ -154,34 +184,30 @@ function SearchEvent() {
                 name="toDate"
                 value={filters.toDate}
                 onChange={handleChange}
-                onClick={(e) => e.target.showPicker && e.target.showPicker()}
               />
             </div>
 
             <button type="submit" className="search-btn">
-              Search Events
+              {loading ? "Searching..." : "Search Events"}
             </button>
           </div>
         </form>
       </div>
 
-      {/* Statistics (kept the same) */}
+      {/* Statistics */}
       <div className="event-statistics">
         <div className="event-five">
           <strong>5</strong>
           <p>UPCOMING EVENTS</p>
         </div>
-
         <div className="event-four">
           <strong>4</strong>
           <p>ACADEMIC EVENTS</p>
         </div>
-
         <div className="event-zero">
           <strong>0</strong>
           <p>PARTICIPANT REGISTRATIONS</p>
         </div>
-
         <div className="event-two">
           <strong>2</strong>
           <p>COUNTRIES REPRESENTED</p>

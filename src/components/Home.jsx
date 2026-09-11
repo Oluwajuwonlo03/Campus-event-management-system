@@ -4,10 +4,10 @@ import FeaturedEvents from "./FeaturedEvents";
 import CallsForPapers from "./CallsForPapers";
 import ExploreEvents from "./ExploreEvents";
 
-function Home() {
+function Home({ onSearch }) {
   return (
     <>
-      {/* HERO SECTION (moved from Navbar) */}
+      {/* HERO SECTION */}
       <div className="hero">
         <div className="hero-content">
           <button className="hero-badge">
@@ -38,8 +38,7 @@ function Home() {
         </div>
       </div>
 
-      {/* Rest of the homepage */}
-      <SearchEvent />
+      <SearchEvent onSearch={onSearch} />
       <ExploreFormat />
       <FeaturedEvents />
       <CallsForPapers />
