@@ -1,0 +1,295 @@
+/* ================================
+   CALENDAR PAGE
+================================ */
+
+.calendar-page {
+  width: 100%;
+  background: #f5f9fa;
+  color: #17242a;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.calendar-hero {
+  width: 100%;
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(111, 151, 35, 0.45),
+      transparent 35%
+    ),
+    linear-gradient(
+      110deg,
+      #063d22 0%,
+      #075127 55%,
+      #245e22 100%
+    );
+
+  color: white;
+}
+
+.calendar-hero-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+
+.calendar-badge {
+  display: inline-block;
+  padding: 9px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.calendar-hero h1 {
+  margin: 24px 0 14px;
+
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.calendar-hero p {
+  max-width: 750px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ================================
+   EVENTS SECTION
+================================ */
+
+.calendar-events {
+  width: 100%;
+  padding: 55px 0 80px;
+}
+
+.calendar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ================================
+   MONTH
+================================ */
+
+.calendar-month {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.calendar-month h2 {
+  margin: 0 0 20px;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  color: #27343a;
+}
+
+/* ================================
+   EVENT LIST
+================================ */
+
+.events-grid {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+/* ================================
+   EVENT CARD
+================================ */
+
+.calendar-card {
+  width: 100%;
+  min-height: 185px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 35px;
+
+  padding: 24px 26px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5ebea;
+  border-radius: 7px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  box-sizing: border-box;
+}
+
+.event-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-type {
+  display: inline-block;
+
+  margin-bottom: 11px;
+  padding: 5px 10px;
+
+  border-radius: 5px;
+
+  background: #e8f5eb;
+  color: #286b42;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.event-card-content h3 {
+  margin: 0 0 12px;
+
+  color: #1e272c;
+
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.event-date,
+.event-location {
+  margin: 0;
+
+  color: #778187;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.event-location {
+  margin-top: 3px;
+}
+
+/* ================================
+   DOWNLOAD BUTTON
+================================ */
+
+.download-ics {
+  flex-shrink: 0;
+
+  min-width: 110px;
+
+  padding: 10px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  border: 1px solid #8eaaa0;
+  border-radius: 4px;
+
+  color: #638d80;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.download-ics span {
+  margin-top: 2px;
+}
+
+.download-ics:hover {
+  background: #edf5f1;
+  border-color: #557f70;
+  color: #426e60;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .calendar-hero-content,
+  .calendar-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .calendar-hero h1 {
+    font-size: 42px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .calendar-hero {
+    min-height: 230px;
+  }
+
+  .calendar-hero-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .calendar-hero h1 {
+    font-size: 36px;
+  }
+
+  .calendar-hero p {
+    font-size: 15px;
+  }
+
+  .calendar-events {
+    padding-top: 35px;
+  }
+
+  .calendar-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .calendar-month h2 {
+    font-size: 26px;
+  }
+
+  .calendar-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .download-ics {
+    width: 100%;
+  }
+}
+
