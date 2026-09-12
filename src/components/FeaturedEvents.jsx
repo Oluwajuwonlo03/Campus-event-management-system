@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 function FeaturedEvents() {
+  const navigate = useNavigate();
   const events = [
     {
       type: "International Conference",
@@ -12,7 +15,7 @@ function FeaturedEvents() {
       description:
         "A demonstration international conference showcasing the platform’s delegate, programme, Call for Papers and hybrid-event capabilities.",
       format: "Hybrid",
-      location: "Oye-Ekiti, Nigeria",
+      location: "Owerri, Nigeria",
     },
     {
       type: "Conference",
@@ -25,7 +28,7 @@ function FeaturedEvents() {
       description:
         "A sample university conference for research presentations, keynote sessions, panels and networking.",
       format: "Physical",
-      location: "Oye-Ekiti, Nigeria",
+      location: "Owerri, Nigeria",
     },
     {
       type: "Webinar",
@@ -111,9 +114,20 @@ function FeaturedEvents() {
                 <span>{event.location}</span>
               </div>
 
-              <button className="explore-button">
-                Explore Event
-              </button>
+             <button
+              className="explore-button"
+              onClick={() => {
+              const eventPaths = [
+                "international-conference",
+                "conference",
+                "webinar",
+              ];
+
+              navigate(`/featured-events/${eventPaths[index]}`);
+              }}
+              >
+              Explore Event
+            </button>
 
             </div>
 
