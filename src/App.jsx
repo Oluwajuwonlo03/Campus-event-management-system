@@ -1,20 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import ExploreFormat from "./components/ExploreFormat";
-import FeaturedEvents from "./components/FeaturedEvents";
-import CallsForPapers from "./components/CallsForPapers";
-import ExploreEvents from "./components/ExploreEvents";
-import Calendar from "./components/Calendar";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Signin from "./components/Signin";
+import Register from "./components/Register";
+import SearchResults from "./components/SearchResults";
 
 import "./App.css";
 
-function Home() {
+function App() {
   return (
     <>
       <ExploreFormat />
       <FeaturedEvents />
       <CallsForPapers />
-      <ExploreEvents />
+      <ExploreEvents/>
     </>
   );
 }
