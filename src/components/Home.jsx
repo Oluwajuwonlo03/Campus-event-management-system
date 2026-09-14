@@ -42,7 +42,9 @@ function Home({ onSearch }) {
       <ExploreFormat />
       <FeaturedEvents />
       <CallsForPapers />
-      <ExploreEvents />
+      <div id="explore-events">
+        <ExploreEvents />
+      </div>
     </>
   );
 }

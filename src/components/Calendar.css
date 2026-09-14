@@ -1,0 +1,236 @@
+/* Main calendar page */
+
+.calendar-page {
+  width: 100%;
+  background: #f5f8f7;
+  min-height: 100vh;
+  color: #17212b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.calendar-hero {
+  width: 100%;
+  background: linear-gradient(90deg, #004d2a, #176b36, #3d8a22);
+  padding: 55px 7%;
+  box-sizing: border-box;
+}
+
+.calendar-hero-content {
+  max-width: 900px;
+}
+
+.calendar-badge {
+  display: inline-block;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 9px 15px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.calendar-hero h1 {
+  color: white;
+  font-size: 48px;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+.calendar-hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* =========================
+   MONTH SECTION
+========================= */
+
+.calendar-month {
+  width: 86%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+
+.calendar-month h2 {
+  font-size: 28px;
+  margin: 0 0 18px;
+  color: #263342;
+}
+
+
+/* =========================
+   EVENTS GRID
+========================= */
+
+.calendar-events {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.calendar-event {
+  background: white;
+  border-radius: 6px;
+  min-height: 145px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.event-content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* Event category */
+
+.event-tag {
+  display: inline-block;
+  background: #e8f4ed;
+  color: #287348;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+
+/* Event title */
+
+.calendar-event h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #202b36;
+}
+
+
+/* Date */
+
+.event-date {
+  margin: 0 0 7px;
+  font-size: 14px;
+  color: #737b82;
+}
+
+
+/* Location */
+
+.event-location {
+  margin: 0;
+  font-size: 14px;
+  color: #737b82;
+}
+
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+.download-btn {
+  flex-shrink: 0;
+  background: white;
+  color: #36745b;
+  border: 1px solid #8fb3a5;
+  border-radius: 5px;
+
+  padding: 9px 14px;
+  font-size: 14px;
+  cursor: pointer;
+
+  min-width: 103px;
+}
+
+.download-btn:hover {
+  background: #f0f7f3;
+}
+
+
+/* First September button has yellow outline */
+
+.download-btn.highlighted {
+  border: 2px solid #e5b52c;
+}
+
+
+/* =========================
+   OCTOBER
+========================= */
+
+.october-section {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .calendar-hero {
+    padding: 45px 6%;
+  }
+
+  .calendar-hero h1 {
+    font-size: 38px;
+  }
+
+  .calendar-month {
+    width: 88%;
+  }
+
+  .calendar-events {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-event {
+    min-height: 160px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .calendar-hero h1 {
+    font-size: 32px;
+  }
+
+  .calendar-hero p {
+    font-size: 15px;
+  }
+
+  .calendar-event {
+    flex-direction: column;
+  }
+
+  .download-btn {
+    align-self: flex-start;
+  }
+}
