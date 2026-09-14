@@ -1178,3 +1178,98 @@ padding: 15px 100px;
 .back-btn:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+/*VERIFY*/
+
+.verify-btn{
+  background-color: #c8e6c9;
+  color: #0f3822;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+.verify-container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f7f9fa;
+  padding: 80px;
+  box-sizing: border-box;
+  line-height: 1.7;
+  text-align: center;
+
+}
+
+.verify-subtitle{
+  color: #666666;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+ 
+
+}
+.verify-title{
+  font-weight: 600;
+  font-size: 42px;
+}
+  
+.verify-card{
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+}
+.verify-input{
+  flex: 1;
+  border: none;
+  padding: 10px 80px;
+  font-size: 15px;
+  color: #333333;
+}
+.verify-input::placeholder{
+  color: #757575;
+}
+
+.verify-submit{
+  background-color: #388e3c; 
+  color: #ffffff;
+   border: none; 
+   border-radius: 6px;
+    padding: 10px 24px; 
+    font-size: 15px;
+     font-weight: 500;
+     cursor: pointer;
+transition: background-color 0.2
+
+}
+.verify-submit:hover{
+  background-color: #2e7d32;
+}
+.back-btn{
+  margin-top: 10px;
+}
+.verify-search{
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 4px;
+  background-color: white;
+}

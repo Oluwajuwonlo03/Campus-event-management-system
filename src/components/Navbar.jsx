@@ -1,7 +1,7 @@
 import logo from "./logo.jpg";
 import "./Navbar.css"
 
-function Navbar({ onShowSignin, onShowSignup, onBackHome }) {
+function Navbar({ onShowSignin, onShowSignup, onBackHome, onVerifyCertificate }) {
   return (
     <div className="header">
       <div className="logo">
@@ -16,7 +16,11 @@ function Navbar({ onShowSignin, onShowSignup, onBackHome }) {
         <p className="explore">Explore Events</p>
         <p className="academic">Academic Events</p>
         <p className="calender">Calendar</p>
-        <p className="verify">Verify Certificate</p>
+        <p className="verify"
+        onClick={onVerifyCertificate}
+        style={{ cursor: "pointer"}}
+        >
+          Verify Certificate</p>
       </div>
 
       <div className="btn">

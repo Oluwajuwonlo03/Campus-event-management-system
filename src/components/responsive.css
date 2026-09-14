@@ -1,0 +1,204 @@
+/* ================================
+   RESPONSIVE STYLES
+   Only affects your components
+   ================================ */
+
+/* ===== TABLET (up to 1024px) ===== */
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .header {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .header .text {
+    gap: 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .image {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Search Section */
+  .search-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px;
+  }
+
+  .search-button {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px;
+  }
+
+  .search-btn {
+    width: 100% !important;
+  }
+
+  .event-search-box {
+    top: -80px;
+    padding: 25px 20px;
+  }
+
+  /* Register Form */
+  .form-section {
+    width: 95% !important;
+    padding: 40px 30px !important;
+  }
+
+  .register-options {
+    grid-template-columns: 1fr !important;
+  }
+
+  .personal-details-option,
+  .form-grid,
+  .faulty-display,
+  .account {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ===== MOBILE / iPHONE (up to 768px) ===== */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
+  .header .text {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.75rem;
+  }
+
+  .header .btn {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn-1,
+  .signin-btn {
+    flex: 1;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 20px !important;
+  }
+
+  .hero-text {
+    font-size: 2rem !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .hero-btn {
+    flex-direction: column;
+  }
+
+  /* Search Section */
+  .event-section {
+    padding: 40px 4% !important;
+    height: auto !important;
+  }
+
+  .event-search-box {
+    top: -40px;
+    padding: 20px 15px;
+  }
+
+  .search-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-button {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-btn {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+
+  .event-statistics {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    transform: translateY(-30px) !important;
+    padding: 10px !important;
+  }
+
+  /* Register */
+  .form-section {
+    width: 100% !important;
+    padding: 25px 18px !important;
+  }
+
+  .personal-details-option,
+  .form-grid,
+  .student-details,
+  .faulty-display,
+  .account {
+    grid-template-columns: 1fr !important;
+  }
+
+  .personal-input,
+  .email-btn,
+  .tel-button,
+  .student-input,
+  .pass-input {
+    width: 100% !important;
+    padding: 14px !important;
+    box-sizing: border-box;
+  }
+
+  /* Sign In */
+  .auth-container {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .con {
+    padding: 20px 15px;
+  }
+
+  /* Verify */
+  .verify-container {
+    padding: 40px 15px !important;
+  }
+
+  .verify-title {
+    font-size: 28px !important;
+  }
+
+  .verify-input {
+    padding: 12px 15px !important;
+    width: 100%;
+  }
+}
+
+/* ===== SMALL PHONES (up to 480px) ===== */
+@media (max-width: 480px) {
+
+  .header .logo h2 {
+    font-size: 1.1rem;
+  }
+
+  .event-statistics {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-text {
+    font-size: 1.7rem !important;
+  }
+
+  .text-1 {
+    font-size: 1.3rem;
+  }
+}

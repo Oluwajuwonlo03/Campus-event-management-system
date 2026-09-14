@@ -22,6 +22,7 @@ function SearchEvent({ onSearch }) {
         const response = await fetch(API_URL);
         const data = await response.json();
         setEvents(data);
+        console.log("Events loaded:", data); // ← check this in console
       } catch (error) {
         console.error("Error fetching events:", error);
       }
@@ -44,28 +45,38 @@ function SearchEvent({ onSearch }) {
 
     let results = [...events];
 
+    // Keyword filter
     if (filters.keyword.trim() !== "") {
       results = results.filter((event) =>
         (event.title || "").toLowerCase().includes(filters.keyword.toLowerCase())
       );
     }
 
+    // Event type filter
     if (filters.eventType !== "All types") {
-      results = results.filter((event) => event.type === filters.eventType);
+      results = results.filter(
+        (event) => (event.type || "").toLowerCase() === filters.eventType.toLowerCase()
+      );
     }
 
+    // Delivery filter
     if (filters.delivery !== "All modes") {
-      results = results.filter((event) => event.delivery === filters.delivery);
+      results = results.filter(
+        (event) => (event.delivery || "").toLowerCase() === filters.delivery.toLowerCase()
+      );
     }
 
+    // Category filter
     if (filters.category !== "All categories") {
-      results = results.filter((event) => event.category === filters.category);
+      results = results.filter(
+        (event) => (event.category || "").toLowerCase() === filters.category.toLowerCase()
+      );
     }
+
+    console.log("Filtered results:", results); // ← check this in console
 
     setLoading(false);
-
-    // Go to the new Search Results page
-    onSearch(results);
+    onSearch(results); // Go to Search Results page
   };
 
   return (
@@ -81,6 +92,7 @@ function SearchEvent({ onSearch }) {
 
         <form onSubmit={handleSearch}>
           <div className="search-row">
+            {/* Keyword */}
             <div className="form-group">
               <label className="key-word">Keyword</label>
               <br />
@@ -94,6 +106,7 @@ function SearchEvent({ onSearch }) {
               />
             </div>
 
+            {/* Event type */}
             <div className="form-group">
               <label>Event type</label>
               <br />
@@ -116,6 +129,7 @@ function SearchEvent({ onSearch }) {
               </select>
             </div>
 
+            {/* Delivery */}
             <div className="form-group">
               <label>Delivery</label>
               <br />
@@ -131,6 +145,7 @@ function SearchEvent({ onSearch }) {
               </select>
             </div>
 
+            {/* When */}
             <div className="form-group">
               <label>When</label>
               <br />
@@ -141,6 +156,7 @@ function SearchEvent({ onSearch }) {
               </select>
             </div>
 
+            {/* Category */}
             <div className="form-group">
               <label>Category</label>
               <br />
@@ -165,6 +181,7 @@ function SearchEvent({ onSearch }) {
           </div>
 
           <div className="search-button">
+            {/* From Date */}
             <div className="date-group">
               <label>From date</label>
               <br />
@@ -173,9 +190,11 @@ function SearchEvent({ onSearch }) {
                 name="fromDate"
                 value={filters.fromDate}
                 onChange={handleChange}
+                onClick={(e) => e.target.showPicker && e.target.showPicker()}
               />
             </div>
 
+            {/* To Date */}
             <div className="date-group">
               <label>To date</label>
               <br />
@@ -184,6 +203,7 @@ function SearchEvent({ onSearch }) {
                 name="toDate"
                 value={filters.toDate}
                 onChange={handleChange}
+                onClick={(e) => e.target.showPicker && e.target.showPicker()}
               />
             </div>
 

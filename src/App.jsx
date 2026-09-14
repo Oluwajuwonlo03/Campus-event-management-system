@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Signin from "./components/Signin";
 import Register from "./components/Register";
 import SearchResults from "./components/SearchResults";
+import Verify from "./components/Verify";
+import "./components/responsive.css"
 
 import "./App.css";
 
@@ -22,6 +24,7 @@ function App() {
         onShowSignin={() => setView("signin")}
         onShowSignup={() => setView("signup")}
         onBackHome={() => setView("home")}
+        onVerifyCertificate={() => setView("verify")}
       />
 
       {view === "home" && (
@@ -45,6 +48,12 @@ function App() {
       {view === "search" && (
         <SearchResults
           results={searchResults}
+          onBack={() => setView("home")}
+        />
+      )}
+
+      {view === "verify" && (
+        <Verify
           onBack={() => setView("home")}
         />
       )}
